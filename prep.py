@@ -74,7 +74,7 @@ def main():
         for audio in mediainfo.audio_tracks:
             channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in audio.channel_layout.split(" "))
             title = f"{audio.format} {float(channels)}"
-            if not mediainfo.audio_tracks[0].language == audio.language:
+            if mediainfo.audio_tracks[0].language != audio.language:
                 title += ", different lang, is this wanted?"
             if int(audio.stream_identifier) > 0:
                 title += ", not first audio, is this commentary?"
@@ -87,9 +87,9 @@ def main():
             ])
 
         for sub in mediainfo.text_tracks:
-            if sub.language:
-                title = sub.other_language[0]
-                if not mediainfo.text_tracks[0].language == sub.language:
+            if sub.language and sub.language[0].islower():
+                title = sub.language
+                if mediainfo.text_tracks[0].language != sub.language:
                     title += ", different lang, is this wanted?"
                 if sum(x.language == sub.language and x.codec_id == sub.codec_id for x in mediainfo.text_tracks) > 1:
                     title += " (Dialect? Forced?)"
