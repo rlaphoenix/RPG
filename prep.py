@@ -51,11 +51,12 @@ def main():
             "-e", "info",
             "-s", f"title={file.stem}"
         ]
-        for track in mediainfo.video_tracks:
+
+        for video in mediainfo.video_tracks:
             args.extend([
-                "-e", f"track:{track.track_id}",
+                "-e", f"track:{video.track_id}",
                 "-s", "flag-enabled=1",
-                "-s", f"flag-default={'1' if int(track.stream_identifier) == 0 else '0'}",
+                "-s", f"flag-default={'1' if int(video.stream_identifier) == 0 else '0'}",
                 "-s", "flag-forced=0",
                 "-s", "name="
             ])
