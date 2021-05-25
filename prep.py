@@ -62,9 +62,11 @@ def main():
                 "-s", "flag-enabled=1",
                 "-s", f"flag-default={'1' if int(track.stream_identifier) == 0 else '0'}",
                 "-s", "flag-forced=0",
-                "-s", "name=",
-                "-s", f"language={audio_tracks[0].language}",
+                "-s", "name="
             ])
+            language = next((x.language for x in audio_tracks if x.language), None)
+            if language:
+                args.extend(["-s", f"language={language}"])
         for track in audio_tracks:
             channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in track.channel_layout.split(" "))
             title = f"{track.format} {float(channels)}"
