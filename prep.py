@@ -98,6 +98,8 @@ def main():
             else:
                 title = "Und lang tag?"
             title += f" (CC?{' its SRT so probably' if sub.codec_id == 'S_TEXT/UTF8' else ''} SDH?)"
+            if sub.muxing_mode == "zlib":
+                title += ", Disable zlib/track compression!"
             args.extend([
                 "-e", f"track:{sub.track_id}",
                 "-s", "flag-enabled=1",
