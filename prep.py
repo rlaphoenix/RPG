@@ -53,20 +53,21 @@ def main():
         ]
 
         for video in mediainfo.video_tracks:
+            language = next(
+                (x.language for x in mediainfo.audio_tracks if x.language and not x.language[0].isupper()),
+                None
+            )
             memo = "More than one video track? " if int(video.stream_identifier) > 0 else ""
+            if not language:
+                memo += "Correct Lang tag? "
 
             args.extend([
                 "-e", f"track:{video.track_id}",
                 "-s", "flag-enabled=1",
                 "-s", f"flag-default={'1' if int(video.stream_identifier) == 0 else '0'}",
                 "-s", "flag-forced=0",
-                "-s", f"name={memo}"
+                "-s", f"name={memo.strip()}"
             ])
-
-            language = next(
-                (x.language for x in mediainfo.audio_tracks if x.language and not x.language[0].isupper()),
-                None
-            )
             if language:
                 args.extend(["-s", f"language={language}"])
 
