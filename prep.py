@@ -74,6 +74,8 @@ def main():
         for audio in mediainfo.audio_tracks:
             channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in audio.channel_layout.split(" "))
             title = f"{audio.format} {float(channels)}"
+            if not audio.language or audio.language[0].isupper():
+                title += ", Und lang tag?"
             if mediainfo.audio_tracks[0].language != audio.language:
                 title += ", different lang, is this wanted?"
             if int(audio.stream_identifier) > 0:
