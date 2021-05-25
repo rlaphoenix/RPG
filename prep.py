@@ -95,7 +95,7 @@ def main():
                     title += " (Dialect? Forced?)"
             else:
                 title = "Undefined???"
-            title += f" ({'CC' if sub.codec_id == 'S_TEXT/UTF8' else 'type'}?)"
+            title += f" (CC?{' its SRT so probably' if sub.codec_id == 'S_TEXT/UTF8' else ''} SDH?)"
             args.extend([
                 "-e", f"track:{sub.track_id}",
                 "-s", "flag-enabled=1",
