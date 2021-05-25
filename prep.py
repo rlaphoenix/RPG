@@ -1,6 +1,5 @@
 import sys
 import subprocess
-import glob
 from pathlib import Path
 from pymediainfo import MediaInfo
 
@@ -24,9 +23,11 @@ def main():
     if not folder.exists():
         exit("Error: The directory you provided (%s) does not exist." % folder)
 
-    print("Ok, setting up what I can automatically.")
-    print("You still need to follow the handbook. This script cannot cover every single thing.")
-    print("There's various stuff a script simply cannot do automatically.")
+    print(
+        "Ok, setting up what I can automatically.\n"
+        "You still need to follow the handbook. This script cannot cover every single thing.\n"
+        "There's various stuff a script simply cannot do automatically."
+    )
 
     global_tags = folder / "global_tags.xml"
 
@@ -36,7 +37,7 @@ def main():
             f"An example file is available on the GitHub page: {GLOBAL_TAGS_NET}"
         )
 
-    for file in glob.glob(folder / "**/*.mkv", recursive=True):
+    for file in folder.glob("**/*.mkv"):
         mediainfo = MediaInfo.parse(file)
         video_tracks = get_tracks(mediainfo, ["Video"])
         if not video_tracks:
