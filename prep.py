@@ -8,10 +8,6 @@ GLOBAL_TAGS_NET = "https://raw.githubusercontent.com/rlaphoenix/RPG/master/globa
 CHANNEL_LAYOUT_MAP = {"LFE": 0.1}
 
 
-def get_tracks(mediainfo, types):
-    return [t for t in mediainfo.tracks if t.track_type in types]
-
-
 def main():
     if len(sys.argv) <= 1:
         exit("Usage: prep.py [DIRECTORY]")
@@ -39,13 +35,13 @@ def main():
 
     for file in folder.glob("**/*.mkv"):
         mediainfo = MediaInfo.parse(file)
-        video_tracks = get_tracks(mediainfo, ["Video"])
-        if not video_tracks:
-            exit("no video tracks? the fuck?")
-        audio_tracks = get_tracks(mediainfo, ["Audio"])
-        if not video_tracks:
-            exit("no audio tracks? the fuck?")
-        sub_tracks = get_tracks(mediainfo, ["Text"])
+
+        if not mediainfo.video_tracks:
+            exit("Error: No video tracks? hmm?")
+        if not mediainfo.audio_tracks:
+            exit("Error: No audio tracks? hmm?")
+        if not mediainfo.text_tracks:
+            print("Warning: No subtitle tracks?")
 
         args = [
             "mkvpropedit",
@@ -55,7 +51,7 @@ def main():
             "-e", "info",
             "-s", f"title={file.stem}"
         ]
-        for track in video_tracks:
+        for track in mediainfo.video_tracks:
             args.extend([
                 "-e", f"track:{track.track_id}",
                 "-s", "flag-enabled=1",
@@ -63,13 +59,16 @@ def main():
                 "-s", "flag-forced=0",
                 "-s", "name="
             ])
-            language = next((x.language for x in audio_tracks if x.language and not x.language[0].isupper()), None)
+            language = next(
+                (x.language for x in mediainfo.audio_tracks if x.language and not x.language[0].isupper()),
+                None
+            )
             if language:
                 args.extend(["-s", f"language={language}"])
-        for track in audio_tracks:
+        for track in mediainfo.audio_tracks:
             channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in track.channel_layout.split(" "))
             title = f"{track.format} {float(channels)}"
-            if not audio_tracks[0].language == track.language:
+            if not mediainfo.audio_tracks[0].language == track.language:
                 title += ", different lang, is this wanted?"
             if int(track.stream_identifier) > 0:
                 title += ", not first audio, is this commentary?"
@@ -80,18 +79,18 @@ def main():
                 "-s", "flag-forced=0",
                 "-s", f"name={title}",
             ])
-        for track in sub_tracks:
-            if track.language:
-                title = track.other_language[0]
-                if not sub_tracks[0].language == track.language:
+        for sub in mediainfo.text_tracks:
+            if sub.language:
+                title = sub.other_language[0]
+                if not mediainfo.text_tracks[0].language == sub.language:
                     title += ", different lang, is this wanted?"
-                if len([x for x in sub_tracks if x.language == track.language and x.codec_id == track.codec_id]) > 1:
+                if sum(x.language == sub.language and x.codec_id == sub.codec_id for x in mediainfo.text_tracks) > 1:
                     title += " (Dialect? Forced?)"
             else:
                 title = "Undefined???"
-            title += f" ({'CC' if track.codec_id == 'S_TEXT/UTF8' else 'type'}?)"
+            title += f" ({'CC' if sub.codec_id == 'S_TEXT/UTF8' else 'type'}?)"
             args.extend([
-                "-e", f"track:{track.track_id}",
+                "-e", f"track:{sub.track_id}",
                 "-s", "flag-enabled=1",
                 "-s", "flag-default=0",
                 "-s", "flag-forced=0",
