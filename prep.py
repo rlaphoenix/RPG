@@ -36,8 +36,8 @@ def main():
             f"edit the values, and save it to: {global_tags}"
         )
 
-    for f in glob.glob(folder / "**/*.mkv", recursive=True):
-        mediainfo = MediaInfo.parse(f)
+    for file in glob.glob(folder / "**/*.mkv", recursive=True):
+        mediainfo = MediaInfo.parse(file)
         video_tracks = get_tracks(mediainfo, ["Video"])
         if not video_tracks:
             exit("no video tracks? the fuck?")
@@ -52,7 +52,7 @@ def main():
             "-t", f"global:{global_tags}",
             # general
             "-e", "info",
-            "-s", f"title={f.stem}"
+            "-s", f"title={file.stem}"
         ]
         for track in video_tracks:
             args.extend([
@@ -94,12 +94,12 @@ def main():
                 "-s", "flag-forced=0",
                 "-s", f"name={title}"
             ])
-        args.extend([f])
+        args.extend([file])
 
         mkvpropedit = subprocess.run(args, capture_output=True)
         if (mkvpropedit.returncode != 0):
-            exit(f"Failed to mkvpropedit: {f}\nWhy? Not sure, here's the log:\n\n{mkvpropedit.stdout.decode()}")
-        print(f"✓ : {f.name}")
+            exit(f"Failed to mkvpropedit: {file}\nWhy? Not sure, here's the log:\n\n{mkvpropedit.stdout.decode()}")
+        print(f"✓ : {file.name}")
 
     print("✓✓✓ done all files")
 
