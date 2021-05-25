@@ -66,20 +66,22 @@ def main():
             )
             if language:
                 args.extend(["-s", f"language={language}"])
-        for track in mediainfo.audio_tracks:
-            channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in track.channel_layout.split(" "))
-            title = f"{track.format} {float(channels)}"
-            if not mediainfo.audio_tracks[0].language == track.language:
+
+        for audio in mediainfo.audio_tracks:
+            channels = sum(CHANNEL_LAYOUT_MAP.get(x, 1) for x in audio.channel_layout.split(" "))
+            title = f"{audio.format} {float(channels)}"
+            if not mediainfo.audio_tracks[0].language == audio.language:
                 title += ", different lang, is this wanted?"
-            if int(track.stream_identifier) > 0:
+            if int(audio.stream_identifier) > 0:
                 title += ", not first audio, is this commentary?"
             args.extend([
-                "-e", f"track:{track.track_id}",
+                "-e", f"track:{audio.track_id}",
                 "-s", "flag-enabled=1",
-                "-s", f"flag-default={'1' if int(track.stream_identifier) == 0 else '0'}",
+                "-s", f"flag-default={'1' if int(audio.stream_identifier) == 0 else '0'}",
                 "-s", "flag-forced=0",
                 "-s", f"name={title}",
             ])
+
         for sub in mediainfo.text_tracks:
             if sub.language:
                 title = sub.other_language[0]
