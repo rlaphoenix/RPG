@@ -14,7 +14,9 @@ def get_tracks(mediainfo, types):
 
 def main():
     if len(sys.argv) <= 1:
-        exit("gimme path bro python bla.py path")
+        exit("Usage: prep.py [DIRECTORY]")
+    if len(sys.argv) > 2:
+        exit("Error: You provided too much arguments %s, expecting only one." % sys.argv[1:])
 
     folder = sys.argv[1]
     print(f"Ok, setting up what I can automatically, make sure you follow #checklist still for every .mkv file in \"{folder}\", including all folders within")
