@@ -107,11 +107,19 @@ def main():
                 "-s", "flag-forced=0",
                 "-s", f"name={title}"
             ])
-        args.extend([file])
 
-        mkvpropedit = subprocess.run(args, capture_output=True)
-        if (mkvpropedit.returncode != 0):
-            exit(f"Failed to mkvpropedit: {file}\nWhy? Not sure, here's the log:\n\n{mkvpropedit.stdout.decode()}")
+        args.append(str(file))
+
+        try:
+            subprocess.run(args, capture_output=True, check=True)
+        except subprocess.CalledProcessError as e:
+            exit(
+                f"Failed to mkvpropedit: {file}\n"
+                "Why? Not sure, here's the log:\n"
+                "\n" +
+                e.stdout.decode()
+            )
+
         print(f"✓ : {file.name}")
 
     print("✓✓✓ done all files")
