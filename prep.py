@@ -6,6 +6,7 @@ from pymediainfo import MediaInfo
 
 GLOBAL_TAGS_NET = "https://raw.githubusercontent.com/rlaphoenix/RPG/master/global_tags.xml"
 CHANNEL_LAYOUT_MAP = {"LFE": 0.1}
+MEDIA_INFO_SETTINGS = {"Language": "raw"}
 
 
 def get_tracks(mediainfo, types):
@@ -38,7 +39,7 @@ def main():
         )
 
     for file in folder.glob("**/*.mkv"):
-        mediainfo = MediaInfo.parse(file)
+        mediainfo = MediaInfo.parse(file, mediainfo_options=MEDIA_INFO_SETTINGS)
         video_tracks = get_tracks(mediainfo, ["Video"])
         if not video_tracks:
             exit("no video tracks? the fuck?")
