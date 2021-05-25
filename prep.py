@@ -54,7 +54,7 @@ def main():
 
         for video in mediainfo.video_tracks:
             language = next(
-                (x.language for x in mediainfo.audio_tracks if x.language and not x.language[0].isupper()),
+                (x.language for x in mediainfo.audio_tracks if x.language and x.language[0].islower()),
                 None
             )
             memo = "More than one video track? " if int(video.stream_identifier) > 0 else ""
