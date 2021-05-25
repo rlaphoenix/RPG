@@ -94,7 +94,7 @@ def main():
                 if sum(x.language == sub.language and x.codec_id == sub.codec_id for x in mediainfo.text_tracks) > 1:
                     title += " (Dialect? Forced?)"
             else:
-                title = "Undefined???"
+                title = "Und lang tag?"
             title += f" (CC?{' its SRT so probably' if sub.codec_id == 'S_TEXT/UTF8' else ''} SDH?)"
             args.extend([
                 "-e", f"track:{sub.track_id}",
