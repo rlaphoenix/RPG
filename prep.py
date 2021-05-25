@@ -6,7 +6,7 @@ from pymediainfo import MediaInfo
 
 GLOBAL_TAGS_NET = "https://raw.githubusercontent.com/rlaphoenix/RPG/master/global_tags.xml"
 CHANNEL_LAYOUT_MAP = {"LFE": 0.1}
-MEDIA_INFO_SETTINGS = {"Language": "raw"}
+MEDIA_INFO_SETTINGS = {}
 
 
 def get_tracks(mediainfo, types):
@@ -64,7 +64,7 @@ def main():
                 "-s", "flag-forced=0",
                 "-s", "name="
             ])
-            language = next((x.language for x in audio_tracks if x.language), None)
+            language = next((x.language for x in audio_tracks if x.language and not x.language[0].isupper()), None)
             if language:
                 args.extend(["-s", f"language={language}"])
         for track in audio_tracks:
