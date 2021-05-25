@@ -5,6 +5,7 @@ from pathlib import Path
 from pymediainfo import MediaInfo
 
 
+GLOBAL_TAGS_NET = "https://raw.githubusercontent.com/rlaphoenix/RPG/master/global_tags.xml"
 CHANNEL_LAYOUT_MAP = {"LFE": 0.1}
 
 
@@ -31,8 +32,8 @@ def main():
 
     if not global_tags.exists():
         exit(
-            "No global_tags.xml, this is needed, get an example from https://pastebin.com/raw/Lq22AfkB, "
-            f"edit the values, and save it to: {global_tags}"
+            f"No global_tags.xml in provided directory ({global_tags}). This is required. "
+            f"An example file is available on the GitHub page: {GLOBAL_TAGS_NET}"
         )
 
     for file in glob.glob(folder / "**/*.mkv", recursive=True):
