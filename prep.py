@@ -2,6 +2,7 @@ import sys
 import os
 import subprocess
 import glob
+from pathlib import Path
 from pymediainfo import MediaInfo
 
 
@@ -18,20 +19,24 @@ def main():
     if len(sys.argv) > 2:
         exit("Error: You provided too much arguments %s, expecting only one." % sys.argv[1:])
 
-    folder = sys.argv[1]
-    print(f"Ok, setting up what I can automatically, make sure you follow #checklist still for every .mkv file in \"{folder}\", including all folders within")
-    if (not os.path.exists(folder)):
-        exit("which doesn't exist, what you talkin' bout willis??")
+    folder = Path(sys.argv[1])
 
-    global_tags = os.path.join(folder, "global_tags.xml")
+    if not folder.exists():
+        exit("Error: The directory you provided (%s) does not exist." % folder)
 
-    if not os.path.exists(global_tags) or not os.path.isfile(global_tags):
-        exit(f"No global_tags.xml, this is needed, get them from https://pastebin.com/raw/Lq22AfkB, edit the values, and save to \"{global_tags}\"")
+    print("Ok, setting up what I can automatically.")
+    print("You still need to follow the handbook. This script cannot cover every single thing.")
+    print("There's various stuff a script simply cannot do automatically.")
 
-    for f in glob.glob(os.path.join(folder, "**/*.mkv"), recursive=True):
-        
-        filename = os.path.splitext(os.path.basename(f))[0]
+    global_tags = folder / "global_tags.xml"
 
+    if not global_tags.exists():
+        exit(
+            "No global_tags.xml, this is needed, get an example from https://pastebin.com/raw/Lq22AfkB, "
+            f"edit the values, and save it to: {global_tags}"
+        )
+
+    for f in glob.glob(folder / "**/*.mkv", recursive=True):
         mediainfo = MediaInfo.parse(f)
         video_tracks = get_tracks(mediainfo, ["Video"])
         if not video_tracks:
@@ -47,7 +52,7 @@ def main():
             "-t", f"global:{global_tags}",
             # general
             "-e", "info",
-            "-s", f"title={filename}"
+            "-s", f"title={f.stem}"
         ]
         for track in video_tracks:
             args.extend([
@@ -94,7 +99,7 @@ def main():
         mkvpropedit = subprocess.run(args, capture_output=True)
         if (mkvpropedit.returncode != 0):
             exit(f"Failed to mkvpropedit: {f}\nWhy? Not sure, here's the log:\n\n{mkvpropedit.stdout.decode()}")
-        print(f"✓ : {filename}")
+        print(f"✓ : {f.name}")
 
     print("✓✓✓ done all files")
 
