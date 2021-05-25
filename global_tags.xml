@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tags SYSTEM "https://gitlab.com/mbunkus/mkvtoolnix/-/raw/main/examples/matroskatags.dtd">
+<Tags>
+    <Tag>
+        <Targets>
+            <TargetTypeValue>50</TargetTypeValue>
+        </Targets>
+        <Simple>
+            <Name>IMDB</Name> <!-- Include the `tt` from the ID -->
+            <String>tt0089348</String>
+        </Simple>
+        <Simple>
+            <Name>TMDB</Name> <!-- Start with `movie/` for movies, and `tv/` for tv shows -->
+            <String>movie/15983</String>
+        </Simple>
+        <Simple> <!-- Remove this entirely for Movies -->
+            <Name>TVDB</Name> <!-- Use the ID number not the slug, e.g. 73244 not the-office-us -->
+            <String>73244</String>
+        </Simple>
+    </Tag>
+</Tags>
