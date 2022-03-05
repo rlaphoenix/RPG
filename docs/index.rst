@@ -7,6 +7,7 @@ A standardized rule set for P2P (peer-to-peer) DVD Remuxes by RPG.
    :hidden:
 
    rules
+   css
    terminology
 
 .. toctree::
