@@ -4,6 +4,11 @@ RPG Handbook
 Standardised rule set for P2P (peer-to-peer) DVD Remuxes.
 
 .. toctree::
+   :hidden:
+
+   rules
+
+.. toctree::
    :caption: Forums
    :hidden:
 
