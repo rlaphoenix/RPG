@@ -1,0 +1,18 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "rpg-handbook"
+version = "0.1.0"
+description = "Peer-to-Peer DVD Remuxing Rules by -RPG."
+authors = [
+    "rlaphoenix <rlaphoenix@pm.me>",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+Sphinx = "^4.4.0"
+furo = "^2022.3.4"
+m2r2 = "^0.3.2"
+sphinxcontrib-images = "^0.9.4"

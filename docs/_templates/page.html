@@ -1,0 +1,9 @@
+{% extends '!page.html' %}
+{% block content %}
+    {% if release != version %}
+        <div class="admonition important version-warning">
+          <p class="admonition-title">You are reading an outdated version of this documentation page.</p>
+        </div>
+    {% endif %}
+    {{ super() }}
+{% endblock %}
