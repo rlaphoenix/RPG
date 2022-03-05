@@ -16,11 +16,11 @@ Pentium II and effectively instantly on modern hardware.
 Where CSS is Applied
 --------------------
 
-CSS is applied on ISO 9660 Sectors, not on each file. CSS is applied on each VOB sector in it's
-entirety. Header and IFO sectors are unprotected. A sector can contain one or more files' data,
-and one file's data may reside on up to two sectors.
+CSS is applied on ISO 9660 Sectors containing VOB data in it's entirety, not on each file. Header
+and IFO sectors are unprotected. A sector can contain one or more files' data, and one file's data
+may reside on multiple sectors.
 
-If you backup a protected disc to a VIDEO_TS folder without first decryption CSS, it will be a lot
+If you backup a protected disc to a VIDEO_TS folder without first decrypting CSS, it will be a lot
 harder to re-align each VOB file, get each VTS's key for the corresponding VOBs, and decrypt, but
 not impossible.
 
