@@ -1,7 +1,7 @@
 RPG Handbook
 ============
 
-Standardised rule set for P2P (peer-to-peer) DVD Remuxes.
+A standardized rule set for P2P (peer-to-peer) DVD Remuxes.
 
 .. toctree::
    :hidden:
