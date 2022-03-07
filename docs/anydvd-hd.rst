@@ -9,6 +9,7 @@ support, consistent updates, and absolutely no ad-ware push it far past the comp
         €75 for 2 years,
         €89 for 3 years,
         or €109 for a lifetime license
+:Trial: Unlimited Use for 21 days
 :Payment Methods: VISA, MasterCard, Bitcoin, Bitcoin Cash, and Litecoin
 :Discounts: 10% off if you pay with any cryptocurrency
 
