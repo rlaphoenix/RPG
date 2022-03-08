@@ -143,6 +143,20 @@ that we culled with new plastic.
 3. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
    You should be left with a glossy and shiny disc again.
 
+.. tip::
+   When applying solution, you must push it down into the disc. It does not work if you just smear
+   it around and off the disc onto your desk. You must work it in.
+
+.. tip::
+   Sanding under running luke-warm water removes debris better.
+
+.. tip::
+   You only need a small serving of PlastX (or your similar solution).
+
+   .. thumbnail:: _static/images/disc-repair/solution-ratio.webp
+       :width: 500px
+       :title: An example of a disc with too much solution, showing how much you really need.
+
 What now
 --------
 
@@ -159,20 +173,3 @@ big scratches could be below the outermost layer, possibly being damage on the r
 .. thumbnail:: _static/images/disc-repair/before-after.webp
     :width: 600px
     :title: A before and after of a CD when using this method.
-
-Troubleshooting Tips
--------------------------
-
-In the original RED thread, the user SoittakaaParanoid has given the following great tips:
-
-1. You only need a small serving of PlastX (or your similar solution).
-
-.. thumbnail:: _static/images/disc-repair/solution-ratio.webp
-    :width: 500px
-    :title: An example of a disc with too much solution, showing how much you really need.
-
-2. When applying PlastX (or your solution), you must push down on the disk. It does not work if you
-   just smear it around and off the disc onto your desk. You must work it in.
-3. If you feel a grain of material under the sandpaper, or hear the sound change, Stop sanding.
-   Wash the paper and disc, then continue.
-4. Sanding under running luke-warm water removes debris better.
