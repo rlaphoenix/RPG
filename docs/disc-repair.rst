@@ -13,6 +13,14 @@ Disc Repair
    shouldn't affect playback unless it damaged the inner-most layers.
 
 .. warning::
+   If it isn't clear, this is very much a DIY cheapo option to try and repair a disc read problem.
+   If you have a disc of rare content that may potentially be lost to time, go to a professional
+   data recovery service and let them professionally resurface it instead.
+
+   While this method is incredibly common online, it definitely has a mixed bag of success. Do this
+   only as a very last attempt on something not worth much. Do not do this on discs you do not own.
+
+.. warning::
    This tutorial is primarily aimed at CDs. Use this with caution on DVDs, HD DVDs and Blu-rays.
    The method used is only safe on CDs due to how far away the data side is from the read side of
    the polycarbonate layers. You have about half the space on DVD and HD DVD, and a 1/10th of the
