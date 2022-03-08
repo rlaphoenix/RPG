@@ -74,11 +74,10 @@ What you need
 
 1. A problematic disc
 2. 5 to 10 minutes
-3. Meguiar's PlastX (clear plastic cleaner & polish)
-4. Emery paper at 2000 Grit or finer preferred
-5. A soft piece of cloth (e.g., Kitchen Sponge yellow-side, t-shirt, sock, soft towel)
-6. A piece of paper towel
-7. A small bowl of luke-warm water
+3. Clear Plastic Cleaner & Polish Solution (e.g., PlastX, 3M Scratch Remover)
+4. Emery paper (Ideally 1000, 2000, and 3000 grit to alternate with)
+5. A soft piece of cloth (e.g., Sponge yellow-side, paper towel, t-shirt, sock)
+6. A small bowl of luke-warm water (or running water)
 
 BebeVentreHumide got items #3 and #4 from his local Canadian Tire auto-store for a total of
 $13.49, stating as enough to repair over one hundred discs.
