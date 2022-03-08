@@ -56,6 +56,12 @@ Disc Repair
    While BebeVentreHumide didn't come up with this method, the fantastic information and images
    deserve credit.
 
+.. topic:: Alternate Guide
+
+   An alternative guide brought up on the same RED thread that worked for some users surprisingly
+   well was a `guide by electronicsNmore <https://youtu.be/U9Wsb-sft0s>`_ which does do some stuff
+   quite differently. Some stuff done or recommended is NOT recommended by this specific tutorial.
+
 Before we begin
 ---------------
 
