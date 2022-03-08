@@ -115,15 +115,17 @@ The Repair
     :width: 300px
     :title: Example motion of the Repair process so far.
 
-4. Rinse the disc properly with warm water and gently dry it off with a paper towel. You should be
+4. Once you you are finishing your sanding job, sand from the center near the ring outwards lightly
+   but firmly in a straight line. This is said to help a lot and ultimately be very important.
+5. Rinse the disc properly with warm water and gently dry it off with a paper towel. You should be
    left with a less glossy, less shiny disc. A matte look to it.
-5. Put a few drops of PlastX on the CD and polish it with a small piece of cloth until the PlastX
+6. Put a few drops of PlastX on the CD and polish it with a small piece of cloth until the PlastX
    is gone.
 
 .. note::
    In BebeVentreHumide's case, 6 drops was more than enough for his disc.
 
-6. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
+7. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
    You should be left with a glossy and shiny disc again.
 
 You should now inspect the disc and see if you got rid of the scratches. Again, you may be left
