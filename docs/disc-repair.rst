@@ -102,6 +102,12 @@ solutions.
 Stage 1: Sanding
 ^^^^^^^^^^^^^^^^
 
+It is ideal to use multiple stages of Emery paper when sanding the disc. Go for lowest grit to
+highest as time goes on. Ideally start with around 1000 or 2000, and end at around 3000.
+
+When sanding, if you feel a grain of material under the emery paper, or hear the sound change, stop
+sanding. Wash the emery paper and disc, then continue.
+
 1. Cut a small piece of emery paper. About the size of one side of the discs width is enough.
 2. Soak the piece of emery paper in luke-warm water. Make sure it hasn't gone cold.
 3. Sand the disc in straight-line motions from one edge to another edge. Do not curve your motion.
@@ -126,12 +132,19 @@ Stage 1: Sanding
 Stage 2: Buffing
 ^^^^^^^^^^^^^^^^
 
+In this stage of the tutorial, we are simply buffing and filling any holes, cracks, and such with
+PlastX or another solution to get a smoother and shinier surface. Essentially replacing the plastic
+that we culled with new plastic.
+
 1. Rinse the disc properly with warm water and gently dry it off with a paper towel. You should be
    left with a less glossy, less shiny disc. A matte look to it.
 2. Put a few drops of solution on the CD and polish it with a small piece of cloth until the
    solution is gone.
 3. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
    You should be left with a glossy and shiny disc again.
+
+What now
+--------
 
 You should now inspect the disc and see if you got rid of the scratches. Again, you may be left
 with a small few light scratches, don't try to get a perfect looking disc.
