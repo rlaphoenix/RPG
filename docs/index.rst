@@ -4,6 +4,15 @@ RPG Handbook
 .. epigraph::
    A standardized rule set for quality-over-quantity DVD Remuxes by RPG.
 
+About Us
+--------
+
+RPG (Retro Production Group) is a peer-to-peer SD Movie and TV release group established in
+June, 2019.
+
+We focus on quality-over-quantity Remuxes for modern devices and streaming. This Handbook is our
+internal rule set for our releases.
+
 .. toctree::
    :hidden:
 
