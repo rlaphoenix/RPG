@@ -96,6 +96,12 @@ $13.49, stating as enough to repair over one hundred discs.
 The Repair
 ----------
 
+The process is simple. Sand away the current scratches and rebuff it with clear plastic polish
+solutions.
+
+Stage 1: Sanding
+^^^^^^^^^^^^^^^^
+
 1. Cut a small piece of emery paper. About the size of one side of the discs width is enough.
 2. Soak the piece of emery paper in luke-warm water. Make sure it hasn't gone cold.
 3. Sand the disc in straight-line motions from one edge to another edge. Do not curve your motion.
@@ -116,22 +122,23 @@ The Repair
 
 4. Once you you are finishing your sanding job, sand from the center near the ring outwards lightly
    but firmly in a straight line. This is said to help a lot and ultimately be very important.
-5. Rinse the disc properly with warm water and gently dry it off with a paper towel. You should be
+
+Stage 2: Buffing
+^^^^^^^^^^^^^^^^
+
+1. Rinse the disc properly with warm water and gently dry it off with a paper towel. You should be
    left with a less glossy, less shiny disc. A matte look to it.
-6. Put a few drops of PlastX on the CD and polish it with a small piece of cloth until the PlastX
-   is gone.
-
-.. note::
-   In BebeVentreHumide's case, 6 drops was more than enough for his disc.
-
-7. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
+2. Put a few drops of solution on the CD and polish it with a small piece of cloth until the
+   solution is gone.
+3. Once again, rinse the disc properly with warm water and gently dry it off with a paper towel.
    You should be left with a glossy and shiny disc again.
 
 You should now inspect the disc and see if you got rid of the scratches. Again, you may be left
 with a small few light scratches, don't try to get a perfect looking disc.
 
 Try read the disc and if it still gives you problems, carefully inspect to see if there are any
-problematic scratches left. It's possible you did not sand down enough. Repeat Steps 2 onwards.
+problematic scratches left. It's possible you did not sand down enough, or didn't apply enough
+solution. Repeat Stage 1 and/or 2 again.
 
 If you still have problems and it looks like some form of damage isn't going away, it is possible
 big scratches could be below the outermost layer, possibly being damage on the reflective layer.
