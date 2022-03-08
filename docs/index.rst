@@ -39,6 +39,7 @@ internal rule set for our releases.
    :hidden:
 
    rules
+   disc-repair
    css
    terminology
 
