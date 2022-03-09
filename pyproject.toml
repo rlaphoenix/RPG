@@ -9,8 +9,19 @@ description = "Peer-to-Peer DVD Remuxing Rules by -RPG."
 authors = [
     "rlaphoenix <rlaphoenix@pm.me>",
 ]
+license = 'MIT'
+readme = 'README.md'
 homepage = 'https://github.com/rlaphoenix/RPG'
 repository = 'https://github.com/rlaphoenix/RPG'
+classifiers = [
+    'Development Status :: 1 - Planning',
+    'Environment :: Console',
+    'Framework :: Sphinx',
+    'Intended Audience :: End Users/Desktop',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Topic :: Multimedia :: Video',
+]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
