@@ -363,6 +363,30 @@ lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
 
 [[package]]
+name = "subtitle-filter"
+version = "1.4.3"
+description = "Filter SDH entries and more from .srt files"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "tqdm"
+version = "4.63.0"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+telegram = ["requests"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.1.1"
 description = "Backported and Experimental Type Hints for Python 3.6+"
@@ -401,7 +425,7 @@ docs = ["Sphinx", "furo", "m2r2", "sphinxcontrib-images"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<4.0"
-content-hash = "836263bcbdbb244ab90bfc794410319bb4ea765506a7e8ef14cf97c4b6b287c2"
+content-hash = "934f8e84d7c5149ed49318ed5c848e4bd61e6ed75a7e12ff77853c38712e37eb"
 
 [metadata.files]
 alabaster = [
@@ -569,6 +593,14 @@ sphinxcontrib-qthelp = [
 sphinxcontrib-serializinghtml = [
     {file = "sphinxcontrib-serializinghtml-1.1.5.tar.gz", hash = "sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952"},
     {file = "sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl", hash = "sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd"},
+]
+subtitle-filter = [
+    {file = "subtitle-filter-1.4.3.tar.gz", hash = "sha256:675738b11a33a031407fb2a3bbae97875c8adc46744c91f9ebe95b010b7882f3"},
+    {file = "subtitle_filter-1.4.3-py3-none-any.whl", hash = "sha256:21bc56830ce7e2bb056a3482f4f787e7f7616348580332be97087fa0e97bc67b"},
+]
+tqdm = [
+    {file = "tqdm-4.63.0-py2.py3-none-any.whl", hash = "sha256:e643e071046f17139dea55b880dc9b33822ce21613b4a4f5ea57f202833dbc29"},
+    {file = "tqdm-4.63.0.tar.gz", hash = "sha256:1d9835ede8e394bb8c9dcbffbca02d717217113adc679236873eeaac5bc0b3cd"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.1.1-py3-none-any.whl", hash = "sha256:21c85e0fe4b9a155d0799430b0ad741cdce7e359660ccbd8b530613e8df88ce2"},
