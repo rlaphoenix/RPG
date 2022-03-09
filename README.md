@@ -1,5 +1,8 @@
 # RPG
 
+[![Build Tests](https://img.shields.io/github/workflow/status/rlaphoenix/RPG/ci?label=Python%203.8%2B%20builds)](https://github.com/rlaphoenix/RPG/actions?query=workflow%3A%22ci%22)
+[![License](https://img.shields.io/github/license/rlaphoenix/RPG?style=flat)](https://github.com/rlaphoenix/RPG/blob/master/LICENSE)
+
 This repository contains Code and Documentation from the RPG release group.
 
 ## The Documentation
