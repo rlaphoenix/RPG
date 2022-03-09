@@ -1,2 +1,8 @@
 [flake8]
-max-line-length = 120
+ignore =
+    W503,  # line break before binary operator (W503)
+exclude =
+    .venv,  # poetry virtual-env
+    dist,  # poetry builds
+    docs/_build,  # sphinx docs build
+max-line-length=120
