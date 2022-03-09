@@ -9,6 +9,8 @@ description = "Peer-to-Peer DVD Remuxing Rules by -RPG."
 authors = [
     "rlaphoenix <rlaphoenix@pm.me>",
 ]
+homepage = 'https://github.com/rlaphoenix/RPG'
+repository = 'https://github.com/rlaphoenix/RPG'
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
