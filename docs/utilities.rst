@@ -99,6 +99,9 @@ Filenames and Documentation
     Automate filenames for Movies, TV, and Music files. Super handy to automatically set a
     filename based on the Content and it's Streams.
 
+    Take a look at some template's I've made for Movie and TV remuxes:
+    https://gist.github.com/rlaphoenix/06b374c87f27c431c1cd3ae25e5247a9
+
 `nfog <https://github.com/rlaphoenix/nfog>`_
     Automate NFO and Description templates using a bit of Python. Supports Artwork files and
     can be run with a simple CLI call.
