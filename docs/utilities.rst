@@ -58,6 +58,37 @@ Subtitles
     Language-agnostic automatic synchronization of subtitles with video.
     In some scenarios, this can be extremely powerful.
 
+Frame Serving
+-------------
+
+These utilities provide Frame Indexing, Decoding, and Serving to supported NLEs.
+The only NLEs I know with support for all of these, is VapourSynth_ and AviSynth_.
+
+Both are Script-based NLEs and do not use GUIs but rather Python scripts.
+GUIs are available, but are more so for previewing the script output.
+There are GUIs for applying changes, effects, and so on, but are very limited and
+the only one I'm aware of is Japanese-only.
+
+`DGMpgDec (DGIndex) <https://rationalqm.us/dgmpgdec/dgmpgdec.html>`_
+    MPEG-1/2 Decoder and Frame Server.
+    DGMPGDec is a multi-project containing DGIndex, DGDecode, and DGVfapi.
+
+`L-SMASH <https://github.com/VFR-maniac/L-SMASH-Works>`_
+    Video Decoder and Frame Server using Libavcodec, allowing support for a very wide
+    range of codecs, all with accurate frame indexing.
+    I highly recommend L-SMASH over FFMS/FFMS2 where possible, it's generally less buggy.
+    Both FFMS2 and L-SMASH ultimately use Libavcodec, therefore L-SMASH is a great alternative to FFMS2.
+
+`FFMS2 (FFmpegSource2) <https://github.com/FFMS/ffms2>`_
+    Video Decoder and Frame Server using FFmpeg, allowing support for a very wide range
+    of codecs.
+    I've encountered bugs and problems usually relating to poor support for x/y/z version
+    of FFmpeg, seeking is a mess sometimes, decoding is unreliable overall.
+    I've had a lot more success with L-SMASH over FFMS2.
+
+.. _VapourSynth: https://vapoursynth.com
+.. _AviSynth: https://github.com/AviSynth/AviSynthPlus
+
 Filenames and Documentation
 ---------------------------
 
