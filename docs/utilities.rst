@@ -22,6 +22,9 @@ Muxing/Remuxing
 `MakeMKV <https://makemkv.com>`_
     Backup DVDs and Blu-rays as Matroska files. Can also backup Blu-ray discs to HDD.
 
+`PSP-UMD-Remux <https://gist.github.com/rlaphoenix/c2547539f6b35aa7dd33714c43813150>`_
+    Simply Python script to assist in PSP UMD-Video ISO Remuxing.
+
 Demuxing
 --------
 
