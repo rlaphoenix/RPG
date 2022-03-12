@@ -99,3 +99,11 @@ Filenames and Documentation
 `nfog <https://github.com/rlaphoenix/nfog>`_
     Automate NFO and Description templates using a bit of Python. Supports Artwork files and
     can be run with a simple CLI call.
+
+Chocolatey packages
+-------------------
+
+Here's a list of repositories with `Chocolatey <https://chocolatey.org/>`_ packages not
+added to the official repository.
+
+- `rlaphoenix/chocolatey-packages <https://github.com/rlaphoenix/chocolatey-packages>`_
