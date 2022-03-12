@@ -3,6 +3,16 @@ Utilities
 
 This page has a list of helpful software utilities for various purposes.
 
+Technical Analysis
+------------------
+
+`MediaInfo <https://mediaarea.net/en/MediaInfo>`_
+    Convenient unified display of the most relevant technical and tag data for video and audio files.
+    There's also a `Python wrapper <https://github.com/sbraz/pymediainfo>`_ for programmatic use.
+
+`BDInfo <https://github.com/UniqProject/BDInfo>`_
+    BDInfo tool to collect video and audio technical specifications from Blu-ray discs.
+
 Muxing/Remuxing
 ---------------
 
